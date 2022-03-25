@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Webpack App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .upper {
+      height: 500px;
+      width: 100%;
+      background-image: url("https://picsum.photos/1600/600?random=10");
+    }
+    .comment-area {
+      height: 500px;
+      overflow: auto;
+    }
+  </style>
+  <script defer src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',() => {
+      commentPlugin.init({
+        siteKey: 'boching',
+        apiUrl: 'http://13.59.36.215/api_based_board/',
+        containerClassName:'comment-area'
+      })
+    })
+  </script>
+</head>
+  <body>
+    <div>
+      <div class="upper"></div>
+      <div class="comment-area"></div>      
+    </div>
+  </body>
+</html>

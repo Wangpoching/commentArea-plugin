@@ -1,0 +1,26 @@
+.toast {
+  width: 100%;
+}
+
+body {
+  background:  grey;
+}
+
+.header {
+  height: 10px;
+  margin-top: 10vh;
+}
+
+.hide {
+  display: none;
+}
+
+.main {
+  padding-bottom: 0!important;
+}
+
+.footer {
+	margin-bottom: 10vh;
+}
+
+
