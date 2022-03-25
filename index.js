@@ -3,7 +3,7 @@
 // 起始參數
 const ERROR = 'Connection Error'
 const LIMIT = 5
-const BASEURL = 'http://13.59.36.215//api_based_board/'
+const BASEURL = 'http://13.59.36.215//commentArea-plugin/'
 let count = 0
 let hasComment = true
 let isLoaded = false
@@ -23,13 +23,13 @@ function escape(string) {
 }
 
 // 添加留言到 DOM
-function addComment2DOM(container, {nickname, created_at, content}, id, isAppend = true, apper = true) {
+function addComment2DOM(container, {nickname, createdAt, content}, id, isAppend = true, apper = true) {
   const html = `
     <div class="col-8 comment mb-3 ${apper ? '' : 'hide'}">
       <div class="toast" data-id = "${id}" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
           <strong class="me-auto">${escape(nickname)}</strong>
-          <small>${escape(created_at)}</small>
+          <small>${escape(createdAt)}</small>
           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
@@ -127,7 +127,7 @@ $(document).ready(() => {
       const myObserver = new ResizeObserver((entries) => {
         entries.forEach((entry) => {
           if ($('.main').height() < $(window).height()) {
-            if (!$('.loadmore').length && hasComment && isLoadec && $('.comment').length) {
+            if (!$('.loadmore').length && hasComment && isLoaded && $('.comment').length) {
               bindAddMore2Dom()
             }
           }
