@@ -19,7 +19,7 @@ webpack comment board plugin
 
 ### 成果展示
 
-<img src="https://github.com/Wangpoching/commentArea-plugin/blob/master/images/screenshots/.png" width="300" align=center/>
+<img src="https://github.com/Wangpoching/commentArea-plugin/blob/master/images/screenshots/index.png" width="300" align=center/>
 
 這麼美的留言板插件你能不用在你的網頁裡嗎~?
 
